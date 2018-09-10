@@ -8,6 +8,8 @@
     "cross-env": "^5.2.0",
     "electron": "^2.0.8",
     "electron-debug": "^2.0.0",
+    "filesize": "^3.6.1",
+    "is-image": "^2.0.0",
     "jquery": "^3.3.1",
     "xel": "0.0.152"
   },

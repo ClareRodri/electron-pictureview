@@ -2,12 +2,16 @@ import os from 'os';
 import url from 'url';
 import path from 'path';
 import applyFilter from './filters'
+import {setIpc, openDirectory } from './ipcRendererEvents'
+import { open } from 'fs';
 
 window.addEventListener('load', function () {
     console.log(os.cpus());
     addImagesEvent();
-    searchImagesEvent();
+    searchImagesEvent
     selectEvent();
+    setIpc();
+    buttonEvent('open-directory', openDirectory);
 });
 
 function addImagesEvent() {
@@ -62,3 +66,9 @@ function selectEvent() {
 
     })
 }
+
+function buttonEvent(id, func) {
+    var openDir = document.getElementById(id)
+    openDir.addEventListener('click', func)
+}
+
